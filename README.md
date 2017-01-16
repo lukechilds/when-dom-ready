@@ -28,7 +28,7 @@ You can still use callbacks if you want to:
 whenDomReady(() => console.log('DOM is loaded yo!'));
 ```
 
-### whenDomReady.wait()
+### whenDomReady.resume()
 
 There is also a little helper function that will pause the execution of a Promise chain until the DOM is loaded and then pass on the last value.
 
@@ -37,7 +37,7 @@ This allows you to specify complex async control flow in simple readable code:
 ```js
 fetch('/my-badass-api.json')
   .then(getSomeProcessingDoneWhileWaitingForDOM)
-  .then(whenDomReady.wait())
+  .then(whenDomReady.resume())
   .then(injectDataIntoDOM);
 ```
 
@@ -66,7 +66,7 @@ The helper too:
 
 ```js
 //...
-  .then(whenDomReady.wait(doc))
+  .then(whenDomReady.resume(doc))
 ```
 
 ## License
