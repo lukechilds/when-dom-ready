@@ -4,7 +4,7 @@ const doc = document;
 // Loaded ready states
 const loadedStates = ['interactive', 'complete'];
 
-// Return promise
+// Return Promise
 module.exports = cb => new Promise(resolve => {
 	// Handle DOM load
 	const done = () => resolve(cb && cb());
