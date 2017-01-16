@@ -3,6 +3,12 @@ const loadedStates = ['interactive', 'complete'];
 
 // Return Promise
 module.exports = (cb, doc) => new Promise(resolve => {
+	// Allow doc to be passed in as the lone first param
+	if (cb && typeof cb !== 'function') {
+		doc = cb;
+		cb = null;
+	}
+
 	// Use global document if we don't have one
 	doc = doc || document;
 
