@@ -1,6 +1,6 @@
 {
   "name": "when-dom-ready",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Check when the DOM is ready",
   "main": "src/index.js",
   "scripts": {
