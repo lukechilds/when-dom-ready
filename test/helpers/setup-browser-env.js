@@ -1,1 +1,1 @@
-require('browser-env')(['document']);
+require('browser-env')(['window']);
