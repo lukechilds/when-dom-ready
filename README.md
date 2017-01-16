@@ -62,7 +62,7 @@ Again, you can use the callback version as a pure function too:
 whenDomReady(() => console.log('DOM is ready yo!'), doc);
 ```
 
-The helper too:
+And of course the helper:
 
 ```js
 //...
