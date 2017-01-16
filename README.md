@@ -1,6 +1,6 @@
 # when-dom-ready
 
-> Check when the DOM is ready
+> $(document).ready() for the 21st century
 
 [![Build Status](https://travis-ci.org/lukechilds/when-dom-ready.svg?branch=master)](https://travis-ci.org/lukechilds/when-dom-ready) [![Coverage Status](https://coveralls.io/repos/github/lukechilds/when-dom-ready/badge.svg?branch=master)](https://coveralls.io/github/lukechilds/when-dom-ready?branch=master)
 

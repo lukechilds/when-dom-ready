@@ -1,7 +1,7 @@
 {
   "name": "when-dom-ready",
   "version": "1.0.0",
-  "description": "Check when the DOM is ready",
+  "description": "$(document).ready() for the 21st century",
   "main": "src/index.js",
   "scripts": {
     "lint": "xo",
