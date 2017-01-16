@@ -1,16 +1,18 @@
 // Global
 const doc = document;
 
+// Loaded ready states
+const loadedStates = ['interactive', 'complete'];
+
 // Return promise
 module.exports = cb => new Promise(resolve => {
 	// Handle DOM load
 	const done = () => resolve(cb && cb());
 
-	// Run now if DOM has already loaded
-	if (['interactive', 'complete'].indexOf(doc.readyState) >= 0) {
+	// Resolve now if DOM has already loaded
+	// Otherwise wait for DOMContentLoaded
+	if (loadedStates.includes(doc.readyState)) {
 		done();
-
-	// Otherwise wait for DOM
 	} else {
 		doc.addEventListener('DOMContentLoaded', done);
 	}
