@@ -2,7 +2,7 @@
 const loadedStates = ['interactive', 'complete'];
 
 // Return Promise
-module.exports = (cb, doc) => new Promise(resolve => {
+const domLoaded = (cb, doc) => new Promise(resolve => {
 	// Allow doc to be passed in as the lone first param
 	if (cb && typeof cb !== 'function') {
 		doc = cb;
@@ -23,3 +23,8 @@ module.exports = (cb, doc) => new Promise(resolve => {
 		doc.addEventListener('DOMContentLoaded', done);
 	}
 });
+
+// Promise chain helper
+domLoaded.wait = doc => data => domLoaded(doc).then(() => data);
+
+module.exports = domLoaded;
