@@ -56,7 +56,8 @@ import whenDomReady from 'when-dom-ready';
 
 const doc = jsdom.jsdom('').defaultView.document;
 
-whenDomReady(doc).then(() => console.log('DOM is ready yo!'));
+whenDomReady(doc)
+  .then(() => console.log('DOM is ready yo!'));
 ```
 
 Again, you can use the callback version as a pure function too:
