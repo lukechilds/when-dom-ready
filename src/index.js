@@ -1,14 +1,17 @@
 // Global
 const doc = document;
 
-// Run callback when DOM is loaded
-module.exports = cb => {
+// Return promise
+module.exports = cb => new Promise(resolve => {
+	// Handle DOM load
+	const done = () => resolve(cb && cb());
+
 	// Run now if DOM has already loaded
 	if (['interactive', 'complete'].indexOf(doc.readyState) >= 0) {
-		cb();
+		done();
 
 	// Otherwise wait for DOM
 	} else {
-		doc.addEventListener('DOMContentLoaded', cb);
+		doc.addEventListener('DOMContentLoaded', done);
 	}
-};
+});
