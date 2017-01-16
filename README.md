@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.org/lukechilds/when-dom-ready.svg?branch=master)](https://travis-ci.org/lukechilds/when-dom-ready) [![Coverage Status](https://coveralls.io/repos/github/lukechilds/when-dom-ready/badge.svg?branch=master)](https://coveralls.io/github/lukechilds/when-dom-ready?branch=master)
 
-Returns a Promise for cleaner usage and can also be used as pure function.
+Returns a Promise for cleaner usage, provides a Promise chain helper function and can also be used as a pure function.
 
 ## Install
 
