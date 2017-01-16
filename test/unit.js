@@ -53,3 +53,11 @@ test.cb('Promise resolves if we wait for DOMContentLoaded', t => {
 	};
 	jsdom.env(config);
 });
+
+test('Promise chain helper passes value through', async t => {
+	t.plan(1);
+	await Promise
+		.resolve('foo')
+		.then(whenDomReady.resume())
+		.then(val => t.is(val, 'foo'));
+});
