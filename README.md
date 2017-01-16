@@ -30,7 +30,7 @@ whenDomReady(() => console.log('DOM is loaded yo!'));
 
 ### whenDomReady.resume()
 
-There is also a little helper function that will pause the execution of a Promise chain until the DOM is loaded and then pass on the last value.
+There is also a little helper function that will pause the execution of a Promise chain and then resume with the last value once the DOM is loaded.
 
 This allows you to specify complex async control flow in simple readable code:
 
