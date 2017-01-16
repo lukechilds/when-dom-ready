@@ -14,6 +14,8 @@ npm install --save domloaded
 
 ## Usage
 
+### domLoaded()
+
 ```js
 import domLoaded from 'domloaded';
 
@@ -24,6 +26,19 @@ You can still use callbacks if you want to:
 
 ```js
 domLoaded(() => console.log('DOM is loaded yo!'));
+```
+
+### domLoaded.wait()
+
+There is also a little helper function that will pause the execution of a Promise chain until the DOM is loaded and then pass on the last value.
+
+This allows you to specify complex async control flow in simple readable code:
+
+```js
+fetch('/my-badass-api.json')
+  .then(getSomeProcessingDoneWhileWaitingForDOM)
+  .then(domLoaded.wait())
+  .then(injectDataIntoDOM);
 ```
 
 ## Pure usage
@@ -45,6 +60,13 @@ Again, you can use the callback version as a pure function too:
 
 ```js
 domLoaded(() => console.log('DOM is loaded yo!'), doc);
+```
+
+The helper too:
+
+```js
+//...
+  .then(domLoaded.wait(doc))
 ```
 
 ## License
