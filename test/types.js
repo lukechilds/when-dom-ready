@@ -1,10 +1,10 @@
 import test from 'ava';
-import domLoaded from '../';
+import whenDomReady from '../';
 
-test('domLoaded is a function', t => {
-	t.is(typeof domLoaded, 'function');
+test('whenDomReady is a function', t => {
+	t.is(typeof whenDomReady, 'function');
 });
 
-test('domLoaded returns a Promise', t => {
-	t.true(domLoaded() instanceof Promise);
+test('whenDomReady returns a Promise', t => {
+	t.true(whenDomReady() instanceof Promise);
 });

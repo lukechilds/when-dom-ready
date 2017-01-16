@@ -1,22 +1,22 @@
 import test from 'ava';
 import jsdom from 'jsdom';
-import domLoaded from '../';
+import whenDomReady from '../';
 
 test('callback fires with global window', async t => {
 	t.plan(1);
-	domLoaded(() => t.pass());
+	whenDomReady(() => t.pass());
 });
 
 test('Promise resolves with global window', async t => {
 	t.plan(1);
-	domLoaded().then(() => t.pass());
+	whenDomReady().then(() => t.pass());
 });
 
 test('callback fires with local document', async t => {
 	t.plan(1);
 	const config = {
 		html: '',
-		onload: window => domLoaded(() => t.pass(), window.document)
+		onload: window => whenDomReady(() => t.pass(), window.document)
 	};
 	jsdom.env(config);
 });
@@ -25,7 +25,7 @@ test.cb('Promise resolves with local document', t => {
 	t.plan(1);
 	const config = {
 		html: '',
-		onload: window => domLoaded(window.document).then(() => {
+		onload: window => whenDomReady(window.document).then(() => {
 			t.pass();
 			t.end();
 		})
@@ -37,7 +37,7 @@ test('callback fires if we wait for DOMContentLoaded', async t => {
 	t.plan(1);
 	const config = {
 		html: '',
-		created: (err, window) => domLoaded(() => t.pass(), window.document)
+		created: (err, window) => whenDomReady(() => t.pass(), window.document)
 	};
 	jsdom.env(config);
 });
@@ -46,7 +46,7 @@ test.cb('Promise resolves if we wait for DOMContentLoaded', t => {
 	t.plan(1);
 	const config = {
 		html: '',
-		created: (err, window) => domLoaded(window.document).then(() => {
+		created: (err, window) => whenDomReady(window.document).then(() => {
 			t.pass();
 			t.end();
 		})

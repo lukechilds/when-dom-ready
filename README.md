@@ -1,34 +1,34 @@
-# domloaded
+# when-dom-ready
 
-> Check when the DOM is loaded
+> Check when the DOM is ready
 
-[![Build Status](https://travis-ci.org/lukechilds/domloaded.svg?branch=master)](https://travis-ci.org/lukechilds/domloaded) [![Coverage Status](https://coveralls.io/repos/github/lukechilds/domloaded/badge.svg?branch=master)](https://coveralls.io/github/lukechilds/domloaded?branch=master)
+[![Build Status](https://travis-ci.org/lukechilds/when-dom-ready.svg?branch=master)](https://travis-ci.org/lukechilds/when-dom-ready) [![Coverage Status](https://coveralls.io/repos/github/lukechilds/when-dom-ready/badge.svg?branch=master)](https://coveralls.io/github/lukechilds/when-dom-ready?branch=master)
 
 Returns a Promise for cleaner usage and can also be used as pure function.
 
 ## Install
 
 ```shell
-npm install --save domloaded
+npm install --save when-dom-ready
 ```
 
 ## Usage
 
-### domLoaded()
+### whenDomReady()
 
 ```js
-import domLoaded from 'domloaded';
+import whenDomReady from 'when-dom-ready';
 
-domLoaded().then(() => console.log('DOM is loaded yo!'));
+whenDomReady().then(() => console.log('DOM is loaded yo!'));
 ```
 
 You can still use callbacks if you want to:
 
 ```js
-domLoaded(() => console.log('DOM is loaded yo!'));
+whenDomReady(() => console.log('DOM is loaded yo!'));
 ```
 
-### domLoaded.wait()
+### whenDomReady.wait()
 
 There is also a little helper function that will pause the execution of a Promise chain until the DOM is loaded and then pass on the last value.
 
@@ -37,7 +37,7 @@ This allows you to specify complex async control flow in simple readable code:
 ```js
 fetch('/my-badass-api.json')
   .then(getSomeProcessingDoneWhileWaitingForDOM)
-  .then(domLoaded.wait())
+  .then(whenDomReady.wait())
   .then(injectDataIntoDOM);
 ```
 
@@ -49,24 +49,24 @@ For example this works in Node.js:
 
 ```js
 import jsdom from 'jsdom';
-import domLoaded from 'domloaded';
+import whenDomReady from 'when-dom-ready';
 
 const doc = jsdom.jsdom('').defaultView.document;
 
-domLoaded(doc).then(() => console.log('DOM is loaded yo!'));
+whenDomReady(doc).then(() => console.log('DOM is loaded yo!'));
 ```
 
 Again, you can use the callback version as a pure function too:
 
 ```js
-domLoaded(() => console.log('DOM is loaded yo!'), doc);
+whenDomReady(() => console.log('DOM is loaded yo!'), doc);
 ```
 
 The helper too:
 
 ```js
 //...
-  .then(domLoaded.wait(doc))
+  .then(whenDomReady.wait(doc))
 ```
 
 ## License
