@@ -46,7 +46,7 @@ fetch('/my-badass-api.json')
 
 ## Pure usage
 
-You can make the function pure by passing in a `document` object. This is really useful for tests and mocking environments.
+You can make the function pure by passing in a `document` object. This is really [useful for tests](https://github.com/lukechilds/when-dom-ready/blob/master/test/unit.js) and mocking environments.
 
 For example this works in Node.js:
 
