@@ -19,7 +19,8 @@ npm install --save when-dom-ready
 ```js
 import whenDomReady from 'when-dom-ready';
 
-whenDomReady().then(() => console.log('DOM is ready yo!'));
+whenDomReady()
+  .then(() => console.log('DOM is ready yo!'));
 ```
 
 You can still use callbacks if you want to:
