@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "lint": "xo",
-    "test": "ava"
+    "test": "nyc ava",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "ava": {
     "require": [
@@ -38,6 +39,8 @@
   "devDependencies": {
     "ava": "^0.17.0",
     "browser-env": "^2.0.19",
+    "coveralls": "^2.11.15",
+    "nyc": "^10.0.0",
     "xo": "^0.17.1"
   }
 }
