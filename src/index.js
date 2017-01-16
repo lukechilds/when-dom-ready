@@ -25,6 +25,6 @@ const whenDomReady = (cb, doc) => new Promise(resolve => {
 });
 
 // Promise chain helper
-whenDomReady.resume = doc => data => domLoaded(doc).then(() => data);
+whenDomReady.resume = doc => data => whenDomReady(doc).then(() => data);
 
-module.exports = domLoaded;
+module.exports = whenDomReady;
