@@ -1,7 +1,7 @@
 import test from 'ava';
 import domLoaded from '../';
 
-test('domLoaded runs the callback', t => {
+test('domLoaded runs the callback', async t => {
 	t.plan(1);
 	domLoaded(() => t.pass());
 });
