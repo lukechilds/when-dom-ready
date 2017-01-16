@@ -36,9 +36,9 @@ This allows you to specify complex async control flow in simple readable code:
 
 ```js
 fetch('/my-badass-api.json')
-  .then(getSomeProcessingDoneWhileWaitingForDOM)
+  .then(getSomeProcessingDoneWhileWaitingForDom)
   .then(whenDomReady.resume())
-  .then(injectDataIntoDOM);
+  .then(injectDataIntoDom);
 ```
 
 ## Pure usage
