@@ -1,11 +1,11 @@
-// Global
-const doc = document;
-
 // Loaded ready states
 const loadedStates = ['interactive', 'complete'];
 
 // Return Promise
-module.exports = cb => new Promise(resolve => {
+module.exports = (cb, doc) => new Promise(resolve => {
+	// Use global document if we don't have one
+	doc = doc || document;
+
 	// Handle DOM load
 	const done = () => resolve(cb && cb());
 
