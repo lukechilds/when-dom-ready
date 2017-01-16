@@ -19,18 +19,18 @@ npm install --save when-dom-ready
 ```js
 import whenDomReady from 'when-dom-ready';
 
-whenDomReady().then(() => console.log('DOM is loaded yo!'));
+whenDomReady().then(() => console.log('DOM is ready yo!'));
 ```
 
 You can still use callbacks if you want to:
 
 ```js
-whenDomReady(() => console.log('DOM is loaded yo!'));
+whenDomReady(() => console.log('DOM is ready yo!'));
 ```
 
 ### whenDomReady.resume()
 
-There is also a little helper function that will pause the execution of a Promise chain and then resume with the last value once the DOM is loaded.
+There is also a little helper function that will pause the execution of a Promise chain and then resume with the last value once the DOM is ready.
 
 This allows you to specify complex async control flow in simple readable code:
 
@@ -53,13 +53,13 @@ import whenDomReady from 'when-dom-ready';
 
 const doc = jsdom.jsdom('').defaultView.document;
 
-whenDomReady(doc).then(() => console.log('DOM is loaded yo!'));
+whenDomReady(doc).then(() => console.log('DOM is ready yo!'));
 ```
 
 Again, you can use the callback version as a pure function too:
 
 ```js
-whenDomReady(() => console.log('DOM is loaded yo!'), doc);
+whenDomReady(() => console.log('DOM is ready yo!'), doc);
 ```
 
 The helper too:
