@@ -5,7 +5,12 @@
   "main": "src/index.js",
   "scripts": {
     "lint": "xo",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava"
+  },
+  "ava": {
+    "require": [
+      "./test/helpers/setup-browser-env.js"
+    ]
   },
   "xo": {
     "env": "browser"
@@ -31,6 +36,8 @@
   "homepage": "https://github.com/lukechilds/domloaded",
   "dependencies": {},
   "devDependencies": {
+    "ava": "^0.17.0",
+    "browser-env": "^2.0.19",
     "xo": "^0.17.1"
   }
 }
