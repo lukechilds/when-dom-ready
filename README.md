@@ -49,8 +49,8 @@ You can make the function pure by passing in a `document` object. This is really
 For example this works in Node.js:
 
 ```js
-import jsdom from 'jsdom';
-import whenDomReady from 'when-dom-ready';
+const jsdom = require('jsdom');
+const whenDomReady = require('when-dom-ready');
 
 const doc = jsdom.jsdom('').defaultView.document;
 
