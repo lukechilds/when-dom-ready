@@ -2,21 +2,27 @@ import test from 'ava';
 import jsdom from 'jsdom';
 import whenDomReady from '../';
 
-test('callback fires with global window', async t => {
+test.cb('callback fires with global window', t => {
 	t.plan(1);
-	whenDomReady(() => t.pass());
+	whenDomReady(() => {
+		t.pass();
+		t.end();
+	});
 });
 
 test('Promise resolves with global window', async t => {
 	t.plan(1);
-	whenDomReady().then(() => t.pass());
+	await whenDomReady().then(() => t.pass());
 });
 
-test('callback fires with local document', async t => {
+test.cb('callback fires with local document', t => {
 	t.plan(1);
 	const config = {
 		html: '',
-		onload: window => whenDomReady(() => t.pass(), window.document)
+		onload: window => whenDomReady(() => {
+			t.pass();
+			t.end();
+		}, window.document)
 	};
 	jsdom.env(config);
 });
