@@ -16,8 +16,6 @@ npm install --save when-dom-ready
 
 ## Usage
 
-### whenDomReady()
-
 ```js
 import whenDomReady from 'when-dom-ready';
 
@@ -31,9 +29,9 @@ You can still use callbacks if you want to:
 whenDomReady(() => console.log('DOM is ready yo!'));
 ```
 
-### whenDomReady.resume()
+## Promise chain helper
 
-There is also a little helper function that pauses the execution of a Promise chain and then resumes it with the last value once the DOM is ready.
+There is also a little helper function, `whenDomReady.resume()`, that pauses the execution of a Promise chain and then resumes it with the last value once the DOM is ready.
 
 This allows you to specify complex async control flow in simple readable code:
 
