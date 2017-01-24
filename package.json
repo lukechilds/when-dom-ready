@@ -2,11 +2,20 @@
   "name": "when-dom-ready",
   "version": "1.2.2",
   "description": "$(document).ready() for the 21st century",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "babel -d dist src",
     "lint": "xo",
     "test": "nyc ava",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "prepublish": "npm run build"
+  },
+  "babel": {
+    "plugins": [
+      "transform-es2015-arrow-functions",
+      "array-includes"
+    ]
   },
   "ava": {
     "require": [
@@ -39,6 +48,9 @@
   "dependencies": {},
   "devDependencies": {
     "ava": "^0.17.0",
+    "babel-cli": "^6.22.2",
+    "babel-plugin-array-includes": "^2.0.3",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
     "browser-env": "^2.0.19",
     "coveralls": "^2.11.15",
     "jsdom": "^9.9.1",
