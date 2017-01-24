@@ -6,6 +6,9 @@
   "scripts": {
     "prebuild": "rm -rf dist",
     "build": "babel -d dist src",
+    "prebuild:map": "npm run prebuild",
+    "build:map": "babel --source-maps=true -d dist src",
+    "pretest": "npm run build:map",
     "lint": "xo",
     "test": "nyc ava",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
