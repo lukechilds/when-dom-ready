@@ -2,7 +2,7 @@ import test from 'ava';
 import jsdom from 'jsdom';
 import whenDomReady from '../';
 
-test.cb('callback fires with global window', t => {
+test.cb('callback fires with global document', t => {
 	t.plan(1);
 	whenDomReady(() => {
 		t.pass();
@@ -10,7 +10,7 @@ test.cb('callback fires with global window', t => {
 	});
 });
 
-test('Promise resolves with global window', async t => {
+test('Promise resolves with global document', async t => {
 	t.plan(1);
 	await whenDomReady().then(() => t.pass());
 });
