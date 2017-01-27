@@ -39,7 +39,7 @@ test.cb('Promise resolves with local document', t => {
 	jsdom.env(config);
 });
 
-test('callback fires if we wait for DOMContentLoaded', async t => {
+test('callback fires if we run after DOMContentLoaded', async t => {
 	t.plan(1);
 	const config = {
 		html: '',
@@ -48,7 +48,7 @@ test('callback fires if we wait for DOMContentLoaded', async t => {
 	jsdom.env(config);
 });
 
-test.cb('Promise resolves if we wait for DOMContentLoaded', t => {
+test.cb('Promise resolves if we run after DOMContentLoaded', t => {
 	t.plan(1);
 	const config = {
 		html: '',
