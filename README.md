@@ -6,7 +6,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/lukechilds/when-dom-ready/badge.svg?branch=master)](https://coveralls.io/github/lukechilds/when-dom-ready?branch=master)
 [![npm](https://img.shields.io/npm/v/when-dom-ready.svg)](https://www.npmjs.com/package/when-dom-ready)
 
-Returns a Promise for cleaner usage, provides a Promise chain helper function and can also be used as a pure function.
+Returns a Promise for cleaner usage, provides a Promise chain helper function and can also be used as a pure function. The Promise will resolve instantly if the DOM is already ready.
 
 ## Browser Compatibility
 
