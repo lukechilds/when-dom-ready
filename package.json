@@ -11,6 +11,10 @@
     "pretest": "npm run build:map",
     "lint": "xo",
     "test": "nyc ava",
+    "pretest:browser": "npm run pretest",
+    "test:browser": "nyc ava test/browser",
+    "pretest:node": "npm run pretest",
+    "test:node": "nyc ava test/node",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "prepublish": "npm run build"
   },
