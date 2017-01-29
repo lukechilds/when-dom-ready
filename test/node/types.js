@@ -1,5 +1,5 @@
 import test from 'ava';
-import whenDomReady from '../';
+import whenDomReady from '../../';
 
 test('whenDomReady is a function', t => {
 	t.is(typeof whenDomReady, 'function');

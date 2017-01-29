@@ -1,6 +1,6 @@
 import test from 'ava';
 import jsdom from 'jsdom';
-import whenDomReady from '../';
+import whenDomReady from '../../';
 
 test.cb('callback fires with global document', t => {
 	t.plan(1);
