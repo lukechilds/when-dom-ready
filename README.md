@@ -8,6 +8,15 @@
 
 Returns a Promise for cleaner usage, provides a Promise chain helper function and can also be used as a pure function.
 
+## Browser Compatibility
+
+- IE9+ (requires Promise polyfill)
+- Edge *
+- Firefox 29+
+- Safari 8+
+- Chrome 33+
+- Opera 23+
+
 ## Install
 
 ```shell
