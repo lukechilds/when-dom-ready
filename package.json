@@ -3,6 +3,7 @@
   "version": "1.2.5",
   "description": "$(document).ready() for the 21st century",
   "main": "dist/es5.umd/index.js",
+  "module": "src/index.js",
   "scripts": {
     "prebuild": "rm -rf dist",
     "build": "tsc",
