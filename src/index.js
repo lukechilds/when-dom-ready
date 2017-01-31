@@ -13,12 +13,12 @@ const whenDomReady = (cb, doc) => new Promise(resolve => {
 	doc = doc || window.document;
 
 	// Handle DOM load
-	const done = () => resolve(cb && cb());
+	const done = () => resolve(cb && setTimeout(cb));
 
 	// Resolve now if DOM has already loaded
 	// Otherwise wait for DOMContentLoaded
 	if (loadedStates.includes(doc.readyState)) {
-		setTimeout(done, 0);
+		done();
 	} else {
 		doc.addEventListener('DOMContentLoaded', done);
 	}
