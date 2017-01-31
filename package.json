@@ -2,23 +2,15 @@
   "name": "when-dom-ready",
   "version": "1.2.5",
   "description": "$(document).ready() for the 21st century",
-  "main": "dist/index.js",
+  "main": "dist/es5.umd/index.js",
   "scripts": {
     "prebuild": "rm -rf dist",
-    "build": "babel -d dist src",
-    "prebuild:map": "npm run prebuild",
-    "build:map": "babel --source-maps=true -d dist src",
-    "pretest": "npm run build:map",
+    "build": "tsc",
+    "pretest": "npm run build",
     "lint": "xo",
     "test": "nyc ava",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "prepublish": "npm run build"
-  },
-  "babel": {
-    "plugins": [
-      "transform-es2015-arrow-functions",
-      "array-includes"
-    ]
   },
   "ava": {
     "require": [
@@ -51,13 +43,11 @@
   "dependencies": {},
   "devDependencies": {
     "ava": "^0.17.0",
-    "babel-cli": "^6.22.2",
-    "babel-plugin-array-includes": "^2.0.3",
-    "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
     "browser-env": "^2.0.19",
     "coveralls": "^2.11.15",
     "jsdom": "^9.9.1",
     "nyc": "^10.0.0",
+    "typescript": "^2.1.5",
     "xo": "^0.17.1"
   }
 }

@@ -1,0 +1,16 @@
+{
+	"compileOnSave": false,
+	"compilerOptions": {
+		"allowJs": true,
+		"lib": [ "ES2015", "DOM" ],
+		"newLine": "lf",
+		"sourceMap": true,
+
+		"module": "UMD",
+		"target": "ES5",
+		"outDir": "dist/es5.umd"
+	},
+	"include": [
+		"src/**/*.js"
+	]
+}
