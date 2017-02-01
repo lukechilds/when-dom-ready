@@ -39,11 +39,14 @@ test.cb('Promise resolves with local document', t => {
 	jsdom.env(config);
 });
 
-test('callback fires if we run after DOMContentLoaded', async t => {
+test.cb('callback fires if we run after DOMContentLoaded', t => {
 	t.plan(1);
 	const config = {
 		html: '',
-		created: (err, window) => whenDomReady(() => t.pass(), window.document)
+		created: (err, window) => whenDomReady(() => {
+			t.pass();
+			t.end();
+		}, window.document)
 	};
 	jsdom.env(config);
 });
