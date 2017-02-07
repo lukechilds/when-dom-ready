@@ -1,4 +1,5 @@
 import babel from 'rollup-plugin-babel';
+import camelCase from 'camelcase';
 
 const pkg = require('./package.json');
 
@@ -11,7 +12,7 @@ export default {
     {
       dest: pkg.main,
       format: 'umd',
-      moduleName: 'whenDomReady',
+      moduleName: camelCase(pkg.name),
       sourceMap: true
     },
     {
