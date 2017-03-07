@@ -23,6 +23,12 @@ Returns a Promise for cleaner usage, provides a Promise chain helper function an
 npm install --save when-dom-ready
 ```
 
+or for quick testing:
+
+```html
+<script src="https://unpkg.com/when-dom-ready"></script>
+```
+
 ## Usage
 
 ```js
