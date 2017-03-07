@@ -34,8 +34,7 @@ or for quick testing:
 ```js
 import whenDomReady from 'when-dom-ready';
 
-whenDomReady()
-  .then(() => console.log('DOM is ready yo!'));
+whenDomReady().then(() => console.log('DOM is ready yo!'));
 ```
 
 You can still use callbacks if you want to:
@@ -69,8 +68,7 @@ const whenDomReady = require('when-dom-ready');
 
 const doc = jsdom.jsdom('').defaultView.document;
 
-whenDomReady(doc)
-  .then(() => console.log('DOM is ready yo!'));
+whenDomReady(doc).then(() => console.log('DOM is ready yo!'));
 ```
 
 Again, you can use the callback version as a pure function too:
