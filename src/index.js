@@ -1,3 +1,5 @@
+/* eslint no-void: "off" */
+
 // Loaded ready states
 const loadedStates = ['interactive', 'complete'];
 
