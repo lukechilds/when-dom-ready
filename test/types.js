@@ -1,5 +1,5 @@
 import test from 'ava';
-import jsdom from 'jsdom';
+import Window from 'window';
 import whenDomReady from '../';
 
 test('whenDomReady is a function', t => {
@@ -20,16 +20,12 @@ test('whenDomReady.resume returns a function that returns a promise', t => {
 	t.true(returnValue() instanceof Promise);
 });
 
-test.cb('Promise value always resolves to undefined', t => {
+test('Promise value always resolves to undefined', async t => {
 	t.plan(2);
-	const config = {
-		html: '',
-		onload: window => {
-			const promises = [];
-			promises.push(whenDomReady(() => 'foo', window.document).then(val => t.is(val, undefined)));
-			promises.push(whenDomReady(window.document).then(val => t.is(val, undefined)));
-			Promise.all(promises).then(() => t.end());
-		}
-	};
-	jsdom.env(config);
+	const { document } = new Window();
+	const promises = [
+		whenDomReady(() => 'foo', document).then(val => t.is(val, undefined)),
+		whenDomReady(document).then(val => t.is(val, undefined))
+	];
+	await Promise.all(promises);
 });
