@@ -25,7 +25,8 @@
     ]
   },
   "xo": {
-    "env": "browser"
+    "env": "browser",
+    "extends": "xo-lukechilds"
   },
   "repository": {
     "type": "git",
@@ -55,6 +56,7 @@
     "browser-env": "^2.0.23",
     "camelcase": "^4.0.0",
     "coveralls": "^2.11.15",
+    "eslint-config-xo-lukechilds": "^1.0.0",
     "jsdom": "^9.9.1",
     "nyc": "^10.0.0",
     "rollup": "^0.41.4",
