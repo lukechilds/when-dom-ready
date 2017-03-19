@@ -63,25 +63,25 @@ You can make the function pure by passing in a `document` object. This is really
 For example this works in Node.js:
 
 ```js
-const jsdom = require('jsdom');
+const Window = require('window');
 const whenDomReady = require('when-dom-ready');
 
-const doc = jsdom.jsdom('').defaultView.document;
+const { document } = new Window();
 
-whenDomReady(doc).then(() => console.log('DOM is ready yo!'));
+whenDomReady(document).then(() => console.log('DOM is ready yo!'));
 ```
 
 Again, you can use the callback version as a pure function too:
 
 ```js
-whenDomReady(() => console.log('DOM is ready yo!'), doc);
+whenDomReady(() => console.log('DOM is ready yo!'), document);
 ```
 
 And of course the helper:
 
 ```js
 //...
-  .then(whenDomReady.resume(doc))
+  .then(whenDomReady.resume(document))
 ```
 
 ## License
