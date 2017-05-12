@@ -1,6 +1,6 @@
 {
   "name": "when-dom-ready",
-  "version": "1.2.11",
+  "version": "1.2.12",
   "description": "$(document).ready() for the 21st century",
   "main": "dist/index.umd.js",
   "module": "dist/index.es2015.js",
