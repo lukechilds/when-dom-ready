@@ -16,6 +16,7 @@
   "babel": {
     "plugins": [
       "transform-es2015-arrow-functions",
+      "transform-es2015-block-scoping",
       "array-includes"
     ]
   },
@@ -53,6 +54,7 @@
     "ava": "^0.17.0",
     "babel-plugin-array-includes": "^2.0.3",
     "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
+    "babel-plugin-transform-es2015-block-scoping": "^6.24.1",
     "browser-env": "^2.0.23",
     "camelcase": "^4.0.0",
     "coveralls": "^2.11.15",
