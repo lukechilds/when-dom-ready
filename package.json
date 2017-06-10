@@ -57,18 +57,18 @@
   "homepage": "https://github.com/lukechilds/when-dom-ready",
   "dependencies": {},
   "devDependencies": {
-    "ava": "^0.17.0",
+    "ava": "^0.19.1",
     "babel-plugin-array-includes": "^2.0.3",
     "babel-preset-es2015": "^6.24.1",
     "browser-env": "^2.0.23",
     "camelcase": "^4.0.0",
     "coveralls": "^2.11.15",
     "eslint-config-xo-lukechilds": "^1.0.0",
-    "jsdom": "^9.9.1",
-    "nyc": "^10.0.0",
-    "rollup": "^0.41.4",
+    "jsdom": "^11.0.0",
+    "nyc": "^11.0.2",
+    "rollup": "^0.42.0",
     "rollup-plugin-babel": "^2.7.1",
     "window": "^3.1.1",
-    "xo": "^0.17.1"
+    "xo": "^0.18.2"
   }
 }
