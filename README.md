@@ -1,7 +1,5 @@
 # when-dom-ready
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/lukechilds/when-dom-ready.svg)](https://greenkeeper.io/)
-
 > $(document).ready() for the 21st century
 
 [![Build Status](https://travis-ci.org/lukechilds/when-dom-ready.svg?branch=master)](https://travis-ci.org/lukechilds/when-dom-ready)
