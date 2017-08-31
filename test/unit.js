@@ -1,7 +1,7 @@
 import EventEmitter from 'events';
 import test from 'ava';
 import Window from 'window';
-import whenDomReady from '../';
+import whenDomReady from 'this';
 
 test.cb('callback fires', t => {
 	t.plan(1);
