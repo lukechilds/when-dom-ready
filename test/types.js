@@ -7,7 +7,8 @@ test('whenDomReady is a function', t => {
 });
 
 test('whenDomReady returns a Promise', t => {
-	t.true(whenDomReady() instanceof Promise);
+	const { document } = new Window();
+	t.true(whenDomReady(document) instanceof Promise);
 });
 
 test('whenDomReady.resume is a function', t => {
@@ -15,7 +16,8 @@ test('whenDomReady.resume is a function', t => {
 });
 
 test('whenDomReady.resume returns a function that returns a promise', t => {
-	const returnValue = whenDomReady.resume();
+	const { document } = new Window();
+	const returnValue = whenDomReady.resume(document);
 	t.is(typeof returnValue, 'function');
 	t.true(returnValue() instanceof Promise);
 });
