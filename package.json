@@ -52,7 +52,7 @@
   "homepage": "https://github.com/lukechilds/when-dom-ready",
   "dependencies": {},
   "devDependencies": {
-    "ava": "^0.25.0",
+    "ava": "^1.4.1",
     "babel-plugin-array-includes": "^2.0.3",
     "babel-preset-es2015": "^6.24.1",
     "camelcase": "^4.0.0",
