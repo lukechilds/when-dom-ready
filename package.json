@@ -58,7 +58,7 @@
     "camelcase": "^4.0.0",
     "coveralls": "^3.0.0",
     "eslint-config-xo-lukechilds": "^1.0.0",
-    "nyc": "^11.0.2",
+    "nyc": "^14.1.1",
     "rollup": "^0.52.0",
     "rollup-plugin-babel": "^2.7.1",
     "window": "^4.2.1",
