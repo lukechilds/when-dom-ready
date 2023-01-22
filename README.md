@@ -5,6 +5,9 @@
 [![Build Status](https://travis-ci.org/lukechilds/when-dom-ready.svg?branch=master)](https://travis-ci.org/lukechilds/when-dom-ready)
 [![Coverage Status](https://coveralls.io/repos/github/lukechilds/when-dom-ready/badge.svg?branch=master)](https://coveralls.io/github/lukechilds/when-dom-ready?branch=master)
 [![npm](https://img.shields.io/npm/v/when-dom-ready.svg)](https://www.npmjs.com/package/when-dom-ready)
+[![GitHub Donate](https://badgen.net/badge/GitHub/Sponsor/D959A7?icon=github)](https://github.com/sponsors/lukechilds)
+[![Bitcoin Donate](https://badgen.net/badge/Bitcoin/Donate/F19537?icon=bitcoin)](https://lu.ke/tip/bitcoin)
+[![Lightning Donate](https://badgen.net/badge/Lightning/Donate/F6BC41?icon=bitcoin-lightning)](https://lu.ke/tip/lightning)
 
 Returns a Promise for cleaner usage, provides a Promise chain helper function and can also be used as a pure function. The Promise will resolve instantly if the DOM is already ready.
 
